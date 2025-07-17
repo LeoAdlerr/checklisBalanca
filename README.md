@@ -1,464 +1,440 @@
-<h1 style="color: #34495e; margin-top: 1.5em; margin-bottom: 0.5em; text-align: center; font-size: 2.5em; border-bottom: 3px solid #3498db; padding-bottom: 10px;">📚 Guia de Estudos: Orientação a Objetos Essencial com Java</h1>
-<p style="font-style: italic; color: #555; margin-bottom: 1em; text-align: center;">Este material é um guia de referência para os conceitos fundamentais da Programação Orientada a Objetos (OO), aplicando-os com a linguagem Java. Use-o para revisar e aprofundar seu conhecimento.</p>
+<div class="container">
 
-<hr />
+  <div class="author-box">
+      <h1>📚 Guia de Consulta: Orientação a Objetos Essencial com Java</h1>
+      <p><strong>Autor:</strong> Leonardo Adler da Silva</p>
+      <p>Tecnólogo em Banco de Dados (Fatec São José dos Campos) | Analista de Sistemas I na Universal Armazéns Gerais e Alfandegados</p>
+      <p><strong>Material Consolidado em:</strong> 17 de Julho de 2025</p>
+  </div>
 
-<h2 style="color: #2c3e50; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.8em; border-bottom: 2px solid #ddd; padding-bottom: 5px;">📜 A Origem da Orientação a Objetos</h2>
-<p>
-  Nos anos 60, as linguagens de programação misturavam dados e lógica de forma desorganizada. Para resolver isso, Ole-Johan Dahl e Kristen Nygaard, na Noruega, criaram a primeira linguagem com conceitos de <strong style="color: #c0392b;">Objetos</strong> e <strong style="color: #c0392b;">Classes</strong>, chamada Simula. A ideia era simples e poderosa: juntar <strong style="color: #c0392b;">dados (o que um objeto é)</strong> e <strong style="color: #c0392b;">comportamentos (o que um objeto faz)</strong> em uma única entidade.
-</p>
-<p>
-  Anos depois, Alan Kay popularizou o termo "Orientação a Objetos", e linguagens como C++, Java, C# e Python adotaram esse DNA. Entender OO é dominar a forma moderna de organizar e escalar sistemas de software.
-</p>
+  <h2>📜 A Origem e o Propósito da OO</h2>
+  <p>
+      Nos anos 60, as linguagens de programação misturavam dados e lógica de forma desorganizada. Para resolver a crescente <strong>complexidade</strong>, Ole-Johan Dahl e Kristen Nygaard criaram a Simula, a primeira linguagem com conceitos de <strong>Objetos</strong> e <strong>Classes</strong>. A ideia era simples e poderosa: juntar <strong>dados (o que um objeto é)</strong> e <strong>comportamentos (o que um objeto faz)</strong> em uma única entidade coesa.
+  </p>
+  <p>
+      Entender OO é dominar a forma moderna de organizar, escalar e dar manutenção em sistemas de software.
+  </p>
 
-<hr />
+  <hr>
 
-<h2 style="color: #2c3e50; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.8em; border-bottom: 2px solid #ddd; padding-bottom: 5px;">📅 Semana 1: Os Pilares Fundamentais</h2>
-
-<h3 style="color: #27ae60; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.4em;">✅ Módulo 1 — Classes e Objetos: A Base de Tudo</h3>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🎯 Conceitos-Chave</h4>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><strong style="color: #c0392b;">Abstração</strong>: Focar no que é essencial, definindo identidade, características (atributos) e ações (métodos).</li>
-  <li><strong style="color: #c0392b;">Classe</strong>: A planta ou molde de um objeto.</li>
-  <li><strong style="color: #c0392b;">Objeto</strong>: A instância concreta de uma classe, criada a partir do molde.</li>
-</ul>
-
-<div style="background-color: #9b59b61a; border-left: 4px solid #9b59b6; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">💡 Por que isso é importante?</strong> Classes e objetos resolvem o problema do <strong style="color: #c0392b;">código espalhado</strong>. Em vez de ter variáveis e funções soltas para manipular um usuário, agrupamos tudo o que pertence a um `Usuario` dentro da classe `Usuario`. Isso torna o código mais organizado, intuitivo e fácil de encontrar.</p>
-</div>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">Abstraindo o Mundo Real</h4>
-<p>
-  O primeiro pilar da OO é a <strong style="color: #c0392b;">Abstração</strong>. Trata-se do processo de filtrar características de um elemento do mundo real para representá-lo no software, focando apenas no que é essencial para o sistema.
-</p>
-<div style="background-color: #ecf0f1; border-left: 4px solid #3498db; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Analogia: A Planta da Casa</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li>Uma <strong style="color: #c0392b;">Classe</strong> é como a <strong style="color: #c0392b;">planta de uma casa</strong>. Ela define a estrutura (número de quartos, banheiros) e os comportamentos possíveis (acender luzes, abrir portas). A planta é um modelo, não a casa em si.</li>
-      <li>Um <strong style="color: #c0392b;">Objeto</strong> é a <strong style="color: #c0392b;">casa construída</strong> a partir da planta. Você pode construir várias casas (objetos) usando a mesma planta (classe). Cada casa é uma instância independente: pintar uma de azul não muda a cor das outras.</li>
+  <h2>Módulo 1: A Base de Tudo — Classes e Objetos</h2>
+  <h4>🎯 Conceitos-Chave</h4>
+  <ul>
+      <li><strong>Abstração</strong>: Focar no que é essencial para o sistema, definindo identidade, características (atributos) e ações (métodos) de um conceito.</li>
+      <li><strong>Classe</strong>: A planta, o molde, a receita de um objeto. Define a estrutura e os comportamentos.</li>
+      <li><strong>Objeto</strong>: A instância concreta de uma classe. É a "coisa" construída a partir da planta, com dados próprios.</li>
   </ul>
-</div>
 
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🖥️ Exemplo Prático: A Classe `Usuario`</h4>
-<p style="font-style: italic; color: #555; margin-bottom: 1em;">Nosso objetivo: criar um sistema para registrar usuários. Começamos abstraindo o que é um usuário em nosso contexto.</p>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><strong style="color: #c0392b;">Atributos (características):</strong> `nome`, `email`.</li>
-  <li><strong style="color: #c0392b;">Métodos (ações):</strong> `exibirInfo()`.</li>
-</ul>
+  <div class="info-box">
+      <strong>💡 Por que isso é importante?</strong> Classes e objetos resolvem o problema do <strong>código espalhado</strong>. Em vez de ter variáveis e funções soltas para manipular um usuário, agrupamos tudo que pertence a um <code class="inline-code">Usuario</code> dentro da classe <code class="inline-code">Usuario</code>. Isso torna o código mais organizado, intuitivo e fácil de encontrar.
+  </div>
 
-<pre style="background-color: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; margin-bottom: 1em; font-family: 'Courier New', Courier, monospace; font-size: 0.95em;"><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">// Versão 1: A classe é o "molde" para um Usuário.
+  <div class="analogy-box">
+      <h4>Analogia: A Planta da Casa</h4>
+      <ul>
+          <li>Uma <strong>Classe</strong> é como a <strong>planta de uma casa</strong>. Ela define a estrutura (quartos, banheiros) e os comportamentos possíveis (acender luzes). A planta é um modelo, não a casa em si.</li>
+          <li>Um <strong>Objeto</strong> é a <strong>casa construída</strong>. Você pode construir várias casas (objetos) usando a mesma planta (classe). Cada casa é uma instância independente.</li>
+      </ul>
+  </div>
+
+  <h4>🖥️ Exemplo Prático: A Classe <code class="inline-code">Usuario</code></h4>
+  <pre><code class="language-java">// Versão 1: A classe é o "molde" para um Usuário.
 public class Usuario {
-// Atributos: os dados que definem um usuário.
-String nome;
-String email;
+  // Atributos: os dados que definem um usuário.
+  String nome;
+  String email;
 
-// Método: a ação que um objeto Usuário pode executar.
-void exibirInfo() {
-  System.out.println("Nome: " + nome + ", Email: " + email);
-}
-}
-
-// Classe principal para executar nosso programa
-public class Principal {
-public static void main(String[] args) {
-  // Criando o Objeto 1: uma instância real da classe Usuario.
-  Usuario user1 = new Usuario();
-  user1.nome = "Leonardo"; // Atribuindo dados ao objeto
-  user1.email = "leo@email.com";
-  user1.exibirInfo(); // Invocando o comportamento do objeto
-
-  System.out.println("---");
-
-  // Criando o Objeto 2: outra instância, independente da primeira.
-  Usuario user2 = new Usuario();
-  user2.nome = "Ana";
-  user2.email = "ana@email.com";
-  user2.exibirInfo();
-}
-}
-</code></pre>
-
-<div style="background-color: #f39c121a; border-left: 4px solid #f39c12; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Desafio:</strong> Evolua a classe <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">Usuario</code>. Adicione um novo atributo <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">senha</code> e um método <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">login()</code> que imprima na tela "Usuário [nome do usuário] logado com sucesso!".</p>
-</div>
-
-<hr />
-
-<h3 style="color: #27ae60; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.4em;">✅ Módulo 2 — Construtores e Encapsulamento</h3>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🎯 Conceitos-Chave</h4>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><strong style="color: #c0392b;">Construtor</strong>: Um método especial para garantir que um objeto seja criado em um estado válido e completo.</li>
-  <li><strong style="color: #c0392b;">Encapsulamento</strong>: Proteger os dados internos de um objeto, expondo apenas operações seguras através de métodos públicos (Getters/Setters).</li>
-</ul>
-
-<div style="background-color: #9b59b61a; border-left: 4px solid #9b59b6; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">💡 Por que isso é importante?</strong> Encapsulamento resolve o problema de <strong style="color: #c0392b;">estados inválidos e insegurança</strong>. Ele impede que qualquer parte do código altere um dado importante (como o saldo de uma conta) sem passar por uma validação. Você centraliza as regras de negócio e garante a integridade dos seus objetos.</p>
-</div>
-
-<div style="background-color: #ecf0f1; border-left: 4px solid #3498db; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Analogia: O Carro e o Motorista</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li><strong style="color: #c0392b;">Interface Pública:</strong> O volante, os pedais e o câmbio. São os controles que o motorista usa para interagir com o carro. Em OO, estes são os <strong style="color: #c0392b;">métodos públicos</strong> (como `acelerar()` ou `getVelocidade()`).</li>
-      <li><strong style="color: #c0392b;">Detalhes Privados:</strong> O motor, a injeção eletrônica, a fiação. O motorista não manipula isso diretamente. Em OO, estes são os <strong style="color: #c0392b;">atributos privados</strong>. O encapsulamento esconde essa complexidade e protege o funcionamento interno do carro.</li>
-  </ul>
-</div>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🖥️ Exemplo Prático: Protegendo a Classe `Usuario`</h4>
-<p style="font-style: italic; color: #555; margin-bottom: 1em;">Agora, vamos garantir que um usuário só possa ser criado com dados essenciais e que sua senha não possa ser alterada para um valor inválido.</p>
-
-<pre style="background-color: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; margin-bottom: 1em; font-family: 'Courier New', Courier, monospace; font-size: 0.95em;"><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">// Versão 2: Adicionando construtor e encapsulamento.
-public class Usuario {
-// Atributos agora são PRIVADOS. Só a própria classe pode acessá-los diretamente.
-private String nome;
-private String email;
-private String senha;
-
-// Construtor: é chamado no momento da criação do objeto (new Usuario(...)).
-// Força a criação de um usuário com todos os dados necessários.
-public Usuario(String nome, String email, String senha) {
-  this.nome = nome;
-  this.email = email;
-  this.senha = senha;
-}
-
-// --- MÉTODOS PÚBLICOS (A INTERFACE DE CONTROLE) ---
-
-// Getter para nome: permite que o mundo externo LEIA o nome, mas não altere.
-public String getNome() {
-  return this.nome;
-}
-
-// Getter para email
-public String getEmail() {
-  return this.email;
-}
-
-// Setter para senha: permite que o mundo externo ALTERE a senha, mas com VALIDAÇÃO.
-public void setSenha(String novaSenha) {
-  if (novaSenha != null && novaSenha.length() >= 6) {
-      this.senha = novaSenha;
-      System.out.println("Senha alterada com sucesso!");
-  } else {
-      System.out.println("Erro: A senha deve ter no mínimo 6 caracteres.");
+  // Método: a ação que um objeto Usuário pode executar.
+  void exibirInfo() {
+      System.out.println("Nome: " + nome + ", Email: " + email);
   }
 }
 
-// Método de login agora valida a senha fornecida.
-public boolean login(String emailInput, String senhaInput) {
-  return this.email.equals(emailInput) && this.senha.equals(senhaInput);
-}
-}
-
 public class Principal {
-public static void main(String[] args) {
-  Usuario user = new Usuario("Leonardo", "leo@email.com", "123456");
+  public static void main(String[] args) {
+      // Criando o Objeto 1: uma instância real da classe Usuario.
+      Usuario user1 = new Usuario();
+      user1.nome = "Leonardo";
+      user1.email = "leo@email.com";
+      user1.exibirInfo(); // Saída: Nome: Leonardo, Email: leo@email.com
+      // Criando o Objeto 2: outra instância, independente da primeira.
+      Usuario user2 = new Usuario();
+      user2.nome = "Ana";
+      user2.email = "ana@email.com";
+      user2.exibirInfo(); // Saída: Nome: Ana, Email: ana@email.com
+  }
+}
+</code></pre>
 
-  // Tentar acessar diretamente gera ERRO DE COMPILAÇÃO. Isso é o encapsulamento!
-  // user.nome = "Outro Nome"; // Proibido!
+  <hr>
 
-  // A forma correta de interagir é pelos métodos públicos.
-  System.out.println("Nome do usuário: " + user.getNome());
+  <h2>Módulo 2: Protegendo e Construindo Objetos</h2>
+  <h4>🎯 Conceitos-Chave</h4>
+  <ul>
+      <li><strong>Encapsulamento</strong>: Proteger os dados internos (atributos) de um objeto, expondo apenas operações seguras através de métodos públicos (Getters/Setters). É o princípio de "esconder a complexidade".</li>
+      <li><strong>Construtor</strong>: Um método especial, com o mesmo nome da classe, que garante que um objeto seja criado em um estado válido e completo.</li>
+  </ul>
+
+  <div class="info-box">
+      <strong>💡 Por que isso é importante?</strong> O encapsulamento resolve o problema de <strong>estados inválidos e insegurança</strong>. Ele impede que qualquer parte do código altere um dado importante (como o saldo de uma conta) sem passar por uma validação. Você centraliza as regras de negócio e garante a integridade dos seus objetos.
+  </div>
   
-  user.setSenha("abc"); // Inválido -> Exibe erro.
-  user.setSenha("novaSenhaSegura"); // Válido -> Altera.
+  <h4>🖥️ Exemplo Prático: Protegendo a Classe <code class="inline-code">Usuario</code></h4>
+  <pre><code class="language-java">// Versão 2: Adicionando encapsulamento e construtor.
+public class Usuario {
+  // Atributos agora são PRIVADOS. Só a própria classe pode acessá-los diretamente.
+  private String nome;
+  private String email;
+  private String senha;
 
-  // Testando o login
-  if (user.login("leo@email.com", "novaSenhaSegura")) {
-      System.out.println("Login bem-sucedido!");
-  } else {
-      System.out.println("Email ou senha inválidos.");
+  // Construtor: é chamado no momento da criação (new Usuario(...)).
+  // Força a criação de um usuário com todos os dados necessários.
+  public Usuario(String nome, String email, String senha) {
+      this.nome = nome;
+      this.email = email;
+      this.senha = senha;
   }
-}
+
+  // Getter para nome: permite que o mundo externo LEIA o nome.
+  public String getNome() {
+      return this.nome;
+  }
+
+  // Setter para senha: permite que o mundo externo ALTERE a senha, mas com VALIDAÇÃO.
+  public void setSenha(String novaSenha) {
+      if (novaSenha != null &amp;&amp; novaSenha.length() >= 6) {
+          this.senha = novaSenha;
+          System.out.println("Senha alterada com sucesso!");
+      } else {
+          System.out.println("Erro: A senha deve ter no mínimo 6 caracteres.");
+      }
+  }
+  
+  // ... outros getters
 }
 </code></pre>
 
-<hr />
+  <hr>
 
-<h3 style="color: #27ae60; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.4em;">✅ Módulo 3 — Herança e Polimorfismo</h3>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🎯 Conceitos-Chave</h4>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><strong style="color: #c0392b;">Herança</strong> (`extends`): Permite que uma classe (filha) herde atributos e métodos de outra classe (pai), promovendo o reuso de código.</li>
-  <li><strong style="color: #c0392b;">Polimorfismo</strong> (`@Override`): "Muitas formas". Permite que objetos de classes diferentes respondam à mesma mensagem (chamada de método) de maneiras específicas.</li>
-</ul>
-
-<div style="background-color: #9b59b61a; border-left: 4px solid #9b59b6; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">💡 Por que isso é importante?</strong> Herança resolve o problema do <strong style="color: #c0392b;">código repetido</strong>. Se `Administrador` e `Cliente` têm nome e email, não precisamos reescrever esse código; eles simplesmente herdam de `Usuario`. Polimorfismo resolve o problema do <strong style="color: #c0392b;">código rígido</strong>. Ele nos permite tratar um `Administrador` e um `Cliente` como se fossem ambos um `Usuario` genérico, mas executando seus comportamentos específicos, o que torna o sistema flexível a novos tipos de usuário.</p>
-</div>
-
-<div style="background-color: #ecf0f1; border-left: 4px solid #3498db; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Analogia: Veículos e Sons de Animais</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li><strong style="color: #c0392b;">Herança:</strong> Um `Carro` <strong style="color: #c0392b;">É UM</strong> `Veiculo`. Uma `Moto` <strong style="color: #c0392b;">É UM</strong> `Veiculo`. Ambos herdam características comuns de `Veiculo` (ter rodas, motor, velocidade), mas adicionam suas próprias especificidades.</li>
-      <li><strong style="color: #c0392b;">Polimorfismo:</strong> Imagine uma classe `Animal` com um método `fazerSom()`. Um `Cachorro` (que herda de `Animal`) implementa `fazerSom()` para latir. Um `Gato` implementa para miar. Se você tiver uma lista de `Animal`, pode chamar `fazerSom()` em cada um, e cada bicho fará seu som específico. O mesmo método, diferentes comportamentos.</li>
+  <h2>Módulo 3: Reutilizando e Flexibilizando com Herança e Polimorfismo</h2>
+  <h4>🎯 Conceitos-Chave</h4>
+  <ul>
+      <li><strong>Herança</strong> (<code class="inline-code">extends</code>): Permite que uma classe (filha/subclasse) herde atributos e métodos de outra classe (pai/superclasse), promovendo o reuso de código. Modela uma relação "É UM".</li>
+      <li><strong>Polimorfismo</strong> (<code class="inline-code">@Override</code>): "Muitas formas". Permite que objetos de classes diferentes respondam à mesma chamada de método de maneiras específicas para cada um.</li>
   </ul>
-</div>
+  
+  <div class="faq-box">
+      <h4>Dúvida Comum: Herança Múltipla em Java</h4>
+      <p>Uma classe em Java pode <code class="inline-code">extends</code> (herdar) de <strong>apenas UMA</strong> outra classe. Não existe herança múltipla de classes para evitar problemas de ambiguidade (como o "problema do diamante").</p>
+      <p>No entanto, a herança pode ser <strong>multinível</strong>: uma classe <code class="inline-code">Neta</code> pode herdar da classe <code class="inline-code">Filha</code>, que por sua vez herda da classe <code class="inline-code">Avo</code>. A cadeia de herança pode ser longa.</p>
+  </div>
 
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🖥️ Exemplo Prático: Especializando Usuários</h4>
-<p style="font-style: italic; color: #555; margin-bottom: 1em;">Nosso sistema agora precisa de diferentes tipos de usuários: `Administrador` e `Cliente`. Eles compartilham dados básicos, mas têm ações e formas de login diferentes.</p>
-
-<pre style="background-color: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; margin-bottom: 1em; font-family: 'Courier New', Courier, monospace; font-size: 0.95em;"><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">// --- CLASSE PAI (SUPERCLASSE) ---
+  <h4>🖥️ Exemplo Prático: Especializando Usuários</h4>
+  <pre><code class="language-java">
+// --- CLASSE PAI (SUPERCLASSE) ---
 public class Usuario {
-// Protected: visível para a própria classe e para suas classes filhas.
-protected String nome;
-protected String email;
+  protected String nome; // Protected é visível para as classes filhas.
 
-public Usuario(String nome, String email) {
-  this.nome = nome;
-  this.email = email;
-}
+  public Usuario(String nome) { this.nome = nome; }
 
-// Comportamento padrão de login. Será sobrescrito.
-public void login() {
-  System.out.println(this.nome + " logou com acesso padrão.");
-}
-
-public String getNome() { return this.nome; }
+  public void login() {
+      System.out.println(this.nome + " logou com acesso padrão.");
+  }
 }
 
 // --- CLASSE FILHA 1 (SUBCLASSE) ---
-// Administrador herda de Usuario usando "extends".
 public class Administrador extends Usuario {
+  public Administrador(String nome) {
+      super(nome); // Chama o construtor da classe pai (Usuario).
+  }
 
-public Administrador(String nome, String email) {
-  // "super" chama o construtor da classe pai (Usuario).
-  super(nome, email);
-}
-
-// Polimorfismo: Sobrescrevendo o método login.
-// @Override é uma anotação que garante que estamos sobrescrevendo um método existente.
-@Override
-public void login() {
-  System.out.println("Admin " + this.nome + " logou com privilégios elevados!");
-}
-
-// Método específico de Administrador.
-public void acessarPainelAdmin() {
-  System.out.println(this.nome + " acessou o painel de administração.");
-}
+  // POLIMORFISMO: Sobrescrevendo o método login.
+  @Override
+  public void login() {
+      System.out.println("Admin " + this.nome + " logou com privilégios elevados!");
+  }
 }
 
 // --- CLASSE FILHA 2 (SUBCLASSE) ---
 public class Cliente extends Usuario {
-
-public Cliente(String nome, String email) {
-  super(nome, email);
-}
-
-@Override
-public void login() {
-  System.out.println("Cliente " + this.nome + " logou na loja online.");
-}
-
-// Método específico de Cliente.
-public void realizarCompra(String produto) {
-  System.out.println(this.nome + " comprou um " + produto + ".");
-}
-}
-
-// --- EXECUÇÃO ---
-public class Principal {
-public static void main(String[] args) {
-  // Podemos tratar objetos específicos (Admin, Cliente) como seu tipo genérico (Usuario).
-  Usuario admin = new Administrador("Leo Admin", "leo.admin@empresa.com");
-  Usuario cliente = new Cliente("Ana Cliente", "ana.cliente@email.com");
-
-  // Polimorfismo em ação! O mesmo método login() tem resultados diferentes.
-  admin.login();   // Chama o login() de Administrador
-  cliente.login(); // Chama o login() de Cliente
-}
-}
-</code></pre>
-
-<div style="background-color: #f39c121a; border-left: 4px solid #f39c12; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Desafio:</strong> Crie uma classe base <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">Transacao</code> com um método <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">processar()</code>. Crie duas subclasses, <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">TransacaoCredito</code> e <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">TransacaoDebito</code>, que herdem de <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">Transacao</code> e sobrescrevam o método <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">processar()</code> para simular a lógica específica de cada tipo de pagamento.</p>
-</div>
-
-<hr />
-
-<h2 style="color: #2c3e50; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.8em; border-bottom: 2px solid #ddd; padding-bottom: 5px;">📅 Semana 2: Design e Arquitetura</h2>
-
-<h3 style="color: #27ae60; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.4em;">✅ Módulo 4 — Classes Abstratas e Interfaces</h3>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🎯 Conceitos-Chave</h4>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><strong style="color: #c0392b;">Classe Abstrata</strong> (`abstract class`): Uma classe "incompleta" que serve como modelo para outras, podendo ter métodos com e sem implementação. Não pode ser instanciada diretamente.</li>
-  <li><strong style="color: #c0392b;">Interface</strong> (`interface`): Um "contrato" que define um conjunto de métodos que uma classe <strong style="color: #c0392b;">deve</strong> implementar. Define "o quê", mas nunca "o como".</li>
-</ul>
-
-<div style="background-color: #9b59b61a; border-left: 4px solid #9b59b6; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">💡 Por que isso é importante?</strong> Interfaces são a base do <strong style="color: #c0392b;">desacoplamento</strong>, um dos princípios mais importantes em software. Elas permitem que diferentes partes do sistema conversem através de "contratos", sem precisarem conhecer os detalhes umas das outras. Isso permite trocar uma peça (como o banco de dados) por outra sem quebrar o resto do sistema. É como poder trocar a marca do pneu do carro sem precisar trocar o carro inteiro.</p>
-</div>
-
-<div style="background-color: #ecf0f1; border-left: 4px solid #3498db; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Analogia: O Contrato e o Manual de Instruções</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li><strong style="color: #c0392b;">Interface (`interface`):</strong> É um <strong style="color: #c0392b;">contrato</strong>. Pense numa interface USB. Ela define um padrão de conexão (o formato do plugue, a voltagem). Qualquer dispositivo que "assina" esse contrato (um pendrive, um mouse) garante que vai funcionar na porta USB. A interface não é o dispositivo, apenas a especificação. Em Java, uma classe pode implementar (<code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">implements</code>) várias interfaces (ela pode ser `Carregavel` E `Armazenavel`).</li>
-      <li><strong style="color: #c0392b;">Classe Abstrata (`abstract class`):</strong> É um <strong style="color: #c0392b;">manual de instruções com partes pré-montadas</strong>. Define um `Veiculo` abstrato que já vem com o método `buzinar()` pronto, mas deixa o método `acelerar()` para ser implementado por cada tipo de veículo (carro, moto). Você não pode construir só o "manual", precisa construir um veículo concreto a partir dele. Em Java, uma classe só pode herdar (<code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">extends</code>) de uma única classe abstrata.</li>
-  </ul>
-</div>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🖥️ Exemplo Prático: Um Contrato para Salvar Usuários</h4>
-<p style="font-style: italic; color: #555; margin-bottom: 1em;">Queremos salvar usuários. Mas hoje pode ser em memória, amanhã em um banco de dados MySQL, e depois em outro sistema. Como fazer isso sem reescrever o código toda vez? Criamos uma <strong style="color: #c0392b;">interface</strong> (contrato) para o "repositório de dados".</p>
-
-<pre style="background-color: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; margin-bottom: 1em; font-family: 'Courier New', Courier, monospace; font-size: 0.95em;"><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">// --- O CONTRATO ---
-// A interface define O QUE um repositório de usuário DEVE FAZER.
-public interface UsuarioRepository {
-void salvar(Usuario usuario);
-Usuario buscarPorEmail(String email);
-}
-
-// (Reutilizando a classe Usuario e subclasses da aula anterior)
-
-// --- IMPLEMENTAÇÃO 1: EM MEMÓRIA ---
-// Útil para testes rápidos, não precisa de banco de dados.
-public class UsuarioRepositoryMemoria implements UsuarioRepository {
-private Map&lt;String, Usuario&gt; bancoDeDadosFalso = new HashMap&lt;&gt;();
-
-@Override
-public void salvar(Usuario usuario) {
-  bancoDeDadosFalso.put(usuario.getEmail(), usuario);
-  System.out.println("MEM: Usuário " + usuario.getNome() + " salvo em memória.");
-}
-
-@Override
-public Usuario buscarPorEmail(String email) {
-  return bancoDeDadosFalso.get(email);
-}
-}
-
-// --- IMPLEMENTAÇÃO 2: BANCO DE DADOS (SIMULADO) ---
-// Representa a lógica que se conectaria a um banco de dados real.
-public class UsuarioRepositoryDB implements UsuarioRepository {
-@Override
-public void salvar(Usuario usuario) {
-  // Aqui entraria a lógica complexa de JDBC/JPA para salvar no banco.
-  System.out.println("DB: Salvando usuário " + usuario.getNome() + " no Banco de Dados...");
-}
-
-@Override
-public Usuario buscarPorEmail(String email) {
-  // Aqui entraria a lógica de SELECT no banco.
-  System.out.println("DB: Buscando usuário com email " + email + " no Banco de Dados...");
-  // Para o exemplo, retornamos um usuário mock.
-  return new Cliente("Usuário do DB", email);
-}
-}
-
-// --- EXECUÇÃO ---
-public class Principal {
-public static void main(String[] args) {
-  // O código principal pode escolher qual implementação usar, SEM MUDAR A LÓGICA.
-  
-  System.out.println("--- Usando Repositório em Memória ---");
-  UsuarioRepository repoMemoria = new UsuarioRepositoryMemoria();
-  repoMemoria.salvar(new Cliente("Alice", "alice@test.com"));
-  
-  System.out.println("\n--- Usando Repositório de Banco de Dados ---");
-  UsuarioRepository repoDB = new UsuarioRepositoryDB();
-  repoDB.salvar(new Administrador("Bob", "bob@test.com"));
-  
-  System.out.println("\nPercebeu? A lógica de negócio não se importa se os dados estão em memória ou DB. Ela só se importa com o CONTRATO (Interface). Isso é desacoplamento!");
-}
-}
-</code></pre>
-
-<hr />
-
-<h3 style="color: #27ae60; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.4em;">✅ Módulo 5 — Projeto Final: Juntando Tudo</h3>
-<p>Neste módulo, conectamos todos os conceitos para construir a espinha dorsal de um mini-backend, mostrando como a OO estrutura aplicações reais.</p>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">Arquitetura em Camadas</h4>
-<p>Aplicações modernas são organizadas em camadas, cada uma com uma responsabilidade clara. A OO é a base para essa organização.</p>
-<div style="background-color: #ecf0f1; border-left: 4px solid #3498db; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Analogia: O Bolo de Camadas</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li><strong style="color: #c0392b;">Camada de Apresentação (Cobertura):</strong> É a parte com que o usuário interage (Controllers em uma API REST). Ela recebe as requisições e devolve as respostas.</li>
-      <li><strong style="color: #c0392b;">Camada de Serviço (Recheio):</strong> Contém a lógica de negócio principal (Services). Orquestra as operações, valida as regras e toma as decisões. É o "cérebro" da aplicação.</li>
-      <li><strong style="color: #c0392b;">Camada de Acesso a Dados (Massa):</strong> Responsável por se comunicar com o banco de dados (Repositories). Sua única função é salvar e buscar dados.</li>
-  </ul>
-  <p>A comunicação flui de cima para baixo: a Apresentação chama o Serviço, que chama o Repositório. As dependências são gerenciadas via <strong style="color: #c0392b;">interfaces</strong>, permitindo que as camadas sejam independentes.</p>
-</div>
-
-<h4 style="color: #8e44ad; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.2em;">🖥️ Exemplo Prático: `GerenciadorDeUsuarios`</h4>
-<p style="font-style: italic; color: #555; margin-bottom: 1em;">Vamos criar nossa Camada de Serviço. Ela usará a interface `UsuarioRepository` sem saber qual implementação está por trás.</p>
-
-<pre style="background-color: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; margin-bottom: 1em; font-family: 'Courier New', Courier, monospace; font-size: 0.95em;"><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">// CAMADA DE SERVIÇO: Contém a lógica de negócio.
-public class GerenciadorDeUsuarios {
-// Depende da INTERFACE, não da implementação concreta!
-private UsuarioRepository repositorio;
-
-// A implementação é "injetada" pelo construtor. Isso é Injeção de Dependência.
-public GerenciadorDeUsuarios(UsuarioRepository repositorio) {
-  this.repositorio = repositorio;
-}
-
-public void cadastrarNovoUsuario(String nome, String email) {
-  if (repositorio.buscarPorEmail(email) != null) {
-      System.out.println("ERRO: Email já cadastrado!");
-      return;
+  public Cliente(String nome) {
+      super(nome);
   }
-  Cliente novoUsuario = new Cliente(nome, email);
-  repositorio.salvar(novoUsuario);
-  System.out.println("SUCESSO: Usuário " + nome + " cadastrado.");
-}
+
+  @Override
+  public void login() {
+      System.out.println("Cliente " + this.nome + " logou na loja online.");
+  }
 }
 
-// --- EXECUÇÃO ---
 public class Principal {
-public static void main(String[] args) {
-  // Cenário 1: Usando o repositório em memória para testar
-  UsuarioRepository repoMemoria = new UsuarioRepositoryMemoria();
-  GerenciadorDeUsuarios gerenciadorTeste = new GerenciadorDeUsuarios(repoMemoria);
-  gerenciadorTeste.cadastrarNovoUsuario("Carlos", "carlos@teste.com");
-  gerenciadorTeste.cadastrarNovoUsuario("Carlos", "carlos@teste.com"); // Vai dar erro
-
-  System.out.println("\n----------------\n");
-
-  // Cenário 2: Usando o repositório de DB em "produção"
-  UsuarioRepository repoDB = new UsuarioRepositoryDB();
-  GerenciadorDeUsuarios gerenciadorProducao = new GerenciadorDeUsuarios(repoDB);
-  gerenciadorProducao.cadastrarNovoUsuario("Daniela", "dani@empresa.com");
-}
+  public static void main(String[] args) {
+      Usuario admin = new Administrador("Leo Admin");
+      Usuario cliente = new Cliente("Ana Cliente");
+      // Polimorfismo em ação! O mesmo método login() tem resultados diferentes.
+      admin.login();   // Chama o login() de Administrador
+      cliente.login(); // Chama o login() de Cliente
+  }
 }
 </code></pre>
 
-<div style="background-color: #f39c121a; border-left: 4px solid #f39c12; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Desafio Final:</strong> Implemente a classe <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">UsuarioRepositoryMySQL</code> de verdade, usando JDBC para se conectar a um banco de dados MySQL local. Você precisará do driver JDBC do MySQL e de uma tabela <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">usuarios</code>. O objetivo é ver o <code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">GerenciadorDeUsuarios</code> funcionar com uma persistência real sem nenhuma alteração em seu código.</p>
-  <div style="background-color: #e74c3c1a; border-left: 4px solid #e74c3c; padding: 10px 15px; margin: 1em 0;">
-      <p><strong style="color: #c0392b;">Aviso de Segurança:</strong> Em um sistema real, <strong style="color: #c0392b;">NUNCA</strong> armazene senhas em texto puro no banco de dados. Elas devem ser sempre "hasheadas" com algoritmos como o BCrypt. O foco do exercício é a arquitetura e a conexão.</p>
-  </div>
-</div>
-
-<hr />
-
-<h2 style="color: #2c3e50; margin-top: 1.5em; margin-bottom: 0.5em; font-size: 1.8em; border-bottom: 2px solid #ddd; padding-bottom: 5px;">🚀 Epílogo — Por que a OO é Essencial?</h2>
-<p>
-  Desde os simuladores de navios até os complexos sistemas em nuvem de hoje, a Orientação a Objetos nasceu para gerenciar um desafio que nunca desaparece: a <strong style="color: #c0392b;">complexidade</strong>. Ao modelar o software com objetos, classes, heranças e contratos, tornamos o código mais próximo da forma como o cérebro humano organiza o mundo.
-</p>
-<p>
-  Em um framework como o <strong style="color: #c0392b;">Spring Boot</strong>, esses princípios são a base de tudo:
-</p>
-<ul style="list-style-type: disc; margin-left: 20px;">
-  <li><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">@Repository</code> é a nossa camada de acesso a dados, baseada em interfaces.</li>
-  <li><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">@Service</code> é a nossa camada de lógica de negócio.</li>
-  <li><code style="font-family: 'Courier New', Courier, monospace; background-color: #e9e9e9; padding: 2px 4px; border-radius: 3px;">@RestController</code> é a nossa camada de apresentação.</li>
-</ul>
-<p>
-  O framework automatiza a "injeção de dependências" que fizemos manualmente no construtor, mas o princípio arquitetural é exatamente o mesmo. Dominar a OO é a chave para criar sistemas <strong style="color: #c0392b;">manuteníveis, testáveis e escaláveis</strong>.
-</p>
-
-<div style="background-color: #2ecc711a; border-left: 4px solid #2ecc71; padding: 10px 15px; margin: 1em 0;">
-  <p><strong style="color: #c0392b;">Próximos Passos na sua Jornada:</strong></p>
-  <ul style="list-style-type: disc; margin-left: 20px;">
-      <li><strong style="color: #c0392b;">Princípios SOLID:</strong> São 5 regras de design que aprimoram o uso da OO. O que vimos aqui é a fundação para entendê-los.</li>
-      <li><strong style="color: #c0392b;">Padrões de Projeto (Design Patterns):</strong> Soluções consagradas para problemas comuns (Factory, Singleton, Strategy). O padrão Repository que vimos é um deles!</li>
-      <li><strong style="color: #c0392b;">Testes Unitários:</strong> Aprender a testar cada camada de forma isolada, usando "mocks" para simular as dependências.</li>
+  <hr>
+  
+  <h2>Módulo 4: Desacoplando com Contratos e Modelos</h2>
+  <h4>🎯 Conceitos-Chave</h4>
+  <ul>
+      <li><strong>Interface</strong> (<code class="inline-code">interface</code>): Um "contrato" 100% abstrato. Define um conjunto de métodos que uma classe <strong>deve</strong> implementar. Define "o quê" fazer, mas nunca "o como".</li>
+      <li><strong>Classe Abstrata</strong> (<code class="inline-code">abstract class</code>): Uma classe "incompleta" que pode mesclar métodos concretos (com corpo) e métodos abstratos (sem corpo). Serve como um modelo base, mas não pode ser instanciada diretamente.</li>
   </ul>
+  
+  <div class="key-point-box">
+      <h4>Ponto de Atenção: Classe Abstrata vs. Interface</h4>
+      <ul>
+          <li>Use uma <strong>Classe Abstrata</strong> quando quiser compartilhar código comum (métodos já implementados) entre várias subclasses relacionadas (relação "É UM").</li>
+          <li>Use uma <strong>Interface</strong> quando quiser definir uma capacidade ou um comportamento que classes não relacionadas podem implementar (relação "É CAPAZ DE"). Pense em <code class="inline-code">Autenticavel</code>, <code class="inline-code">Imprimivel</code>, <code class="inline-code">Comparavel</code>.</li>
+      </ul>
+  </div>
+  
+  <div class="faq-box">
+      <h4>Dúvida Comum: Implementando Múltiplas Interfaces</h4>
+      <p>Diferente da herança de classes, uma classe em Java pode <code class="inline-code">implements</code> (implementar) <strong>VÁRIAS</strong> interfaces. Isso é o que permite a flexibilidade do polimorfismo em larga escala. Um objeto pode "vestir vários chapéus", assinando diferentes contratos.</p>
+      <p>Exemplo: <code class="inline-code">public class SmartTV extends Eletronico implements Conectavel, Imprimivel</code></p>
+  </div>
+
+  <h4>🖥️ Exemplo Prático: Contrato <code class="inline-code">Autenticavel</code> e Modelo <code class="inline-code">Usuario</code></h4>
+  <pre><code class="language-java">// O Contrato
+public interface Autenticavel {
+  boolean login(String email, String senha); // Toda classe que implementar, DEVE ter este método.
+}
+
+// O Modelo Base (agora abstrato)
+public abstract class Usuario {
+  protected String nome;
+  protected String email;
+
+  public Usuario(String nome, String email) {
+      this.nome = nome;
+      this.email = email;
+  }
+  
+  // Método abstrato: força as classes filhas a implementarem sua própria versão.
+  public abstract void exibirPerfil();
+}
+
+// Classe Concreta implementando o contrato e herdando do modelo
+public class Admin extends Usuario implements Autenticavel {
+  private String senha;
+
+  public Admin(String nome, String email, String senha) {
+      super(nome, email);
+      this.senha = senha;
+  }
+
+  @Override
+  public boolean login(String email, String senha) {
+      // Lógica de autenticação do admin
+      return this.email.equals(email) &amp;&amp; this.senha.equals(senha);
+  }
+
+  @Override
+  public void exibirPerfil() {
+      System.out.println("Perfil de Administrador: " + this.nome);
+  }
+}
+</code></pre>
+
+  <hr>
+
+  <h2>Módulo 5: Arquitetura e Projeto Final</h2>
+  <p>Nesta etapa, conectamos todos os conceitos para estruturar uma aplicação em camadas, simulando um backend real. A OO é a base para essa organização.</p>
+  
+  <div class="analogy-box">
+      <h4>Analogia: O Bolo de Camadas (Arquitetura de Software)</h4>
+      <ul>
+          <li><strong>Camada de Apresentação (Controller):</strong> A parte com que o mundo externo interage. Recebe requisições e devolve respostas.</li>
+          <li><strong>Camada de Serviço (Service):</strong> O "cérebro" da aplicação. Contém a lógica de negócio e orquestra as operações.</li>
+          <li><strong>Camada de Acesso a Dados (Repository):</strong> Responsável por se comunicar com o banco de dados. Sua única função é salvar e buscar dados.</li>
+      </ul>
+      <p>A comunicação flui de cima para baixo, e as dependências entre camadas são gerenciadas via <strong>interfaces</strong> para garantir o desacoplamento.</p>
+  </div>
+
+  <h4>🖥️ Desafio Final Consolidado: Sistema de Gerenciamento</h4>
+  <p>O objetivo é criar um mini-sistema que use todos os pilares da OO. Abaixo está a estrutura e o código sugerido.</p>
+  
+  <h5>Diagrama de Classes</h5>
+  <pre>
+[Interface: Autenticavel] &lt;--implements-- [Admin] --extends--&gt; [Abstract: Usuario]
+          ^                                                        ^
+          |                                                        |
+          +--implements-- [Cliente] --extends---------------------+
+          
+[Interface: Gerenciavel] &lt;--implements-- [Admin]
+  </pre>
+
+  <h5>Código da Solução Final</h5>
+  <pre><code class="language-java">
+// --- INTERFACES (CONTRATOS) ---
+public interface Autenticavel {
+  boolean login(String email, String senha);
+}
+public interface Gerenciavel {
+  void acessarPainelDeControle();
+}
+
+// --- CLASSE ABSTRATA (MODELO BASE) ---
+public abstract class Usuario {
+  protected String nome;
+  protected String email;
+  public Usuario(String nome, String email) { this.nome = nome; this.email = email; }
+  public abstract void exibirPerfil();
+}
+
+// --- CLASSES CONCRETAS ---
+public class Cliente extends Usuario implements Autenticavel {
+  private String senha;
+  public Cliente(String n, String e, String s) { super(n, e); this.senha = s; }
+
+  @Override
+  public boolean login(String email, String senha) { return this.email.equals(email) &amp;&amp; this.senha.equals(senha); }
+
+  @Override
+  public void exibirPerfil() { System.out.println("Cliente: " + nome + " | Email: " + email); }
+}
+
+public class Admin extends Usuario implements Autenticavel, Gerenciavel {
+  private String senha;
+  private String cargo;
+  public Admin(String n, String e, String s, String c) { super(n, e); this.senha = s; this.cargo = c; }
+
+  @Override
+  public boolean login(String email, String senha) { return this.email.equals(email) &amp;&amp; this.senha.equals(senha); }
+  
+  @Override
+  public void acessarPainelDeControle() { System.out.println("Acessando painel como: " + cargo); }
+  
+  @Override
+  public void exibirPerfil() { System.out.println("Admin: " + nome + " | Cargo: " + cargo); }
+}
+
+// --- EXECUÇÃO ---
+public class Main {
+  public static void main(String[] args) {
+      // Note que podemos nos referir a eles pelo tipo mais genérico (Usuario)
+      Usuario cliente = new Cliente("João", "joao@email.com", "1234");
+      Usuario admin = new Admin("Ana", "ana@email.com", "admin123", "Gerente de TI");
+      cliente.exibirPerfil();
+      admin.exibirPerfil();
+      System.out.println("---");
+      // Para usar métodos das interfaces, precisamos fazer um "cast"
+      if (((Autenticavel)cliente).login("joao@email.com", "1234")) {
+          System.out.println("Login do cliente bem-sucedido!");
+      }
+      if (((Autenticavel)admin).login("ana@email.com", "admin123")) {
+          System.out.println("Login do admin bem-sucedido!");
+          ((Gerenciavel)admin).acessarPainelDeControle();
+      }
+  }
+}
+</code></pre>
+
+  <hr>
+  
+  <h2>🚀 Epílogo e Próximos Passos</h2>
+  <p>Dominar a Orientação a Objetos é a chave para criar sistemas <strong>manuteníveis, testáveis e escaláveis</strong>. Os conceitos que vimos são a base de frameworks modernos como Spring Boot, onde <code class="inline-code">@Repository</code>, <code class="inline-code">@Service</code> e <code class="inline-code">@Controller</code> nada mais são do que a aplicação desses princípios de separação de responsabilidades.</p>
+  
+  <div class="challenge-box">
+      <h4>Sua Jornada Continua:</h4>
+      <ul>
+          <li><strong>Princípios SOLID:</strong> São 5 regras de design que elevam o uso da OO a um nível profissional.</li>
+          <li><strong>Padrões de Projeto (Design Patterns):</strong> Soluções consagradas para problemas comuns (Factory, Singleton, Strategy, etc.).</li>
+          <li><strong>Testes Unitários e Mocks:</strong> Aprender a testar cada camada de forma isolada, o que só é possível graças ao desacoplamento que a OO promove.</li>
+      </ul>
+  </div>
+  
+  <p style="text-align:center; font-size: 1.2em; margin-top: 2em;">
+      <strong>Missão cumprida. Bons estudos e bom código!</strong>
+  </p>
+
 </div>
 
-<p style="text-align: center; font-size: 1.2em; margin-top: 2em;">
-  🚀 <strong style="color: #c0392b;">Missão cumprida. Bons estudos e bom código!</strong>
-</p>
+<style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .author-box {
+            text-align: center;
+            margin-bottom: 2em;
+            padding: 1em;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .author-box h1 {
+            margin: 0;
+        }
+        .author-box p {
+            margin: 5px 0 0;
+            font-style: italic;
+            color: #495057;
+        }
+        h1, h2, h3, h4 {
+            color: #34495e;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+        h1 { font-size: 2.5em; border-bottom-color: #3498db; }
+        h2 { font-size: 2em; margin-top: 1.8em; }
+        h3 { font-size: 1.6em; border-bottom-style: dashed; }
+        h4 { font-size: 1.3em; border-bottom: none; }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #dee2e6;
+            margin: 2em 0;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .inline-code {
+            background-color: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .info-box, .analogy-box, .challenge-box, .key-point-box, .faq-box {
+            padding: 15px 20px;
+            margin: 1.5em 0;
+            border-left-width: 5px;
+            border-left-style: solid;
+            border-radius: 0 5px 5px 0;
+        }
+        .info-box { background-color: #e8f4fd; border-left-color: #3498db; }
+        .analogy-box { background-color: #fdf3e8; border-left-color: #f39c12; }
+        .challenge-box { background-color: #eafaf1; border-left-color: #2ecc71; }
+        .key-point-box { background-color: #fbeeef; border-left-color: #e74c3c; }
+        .faq-box { background-color: #f5eef8; border-left-color: #9b59b6; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 0.5em; }
+        strong { color: #c0392b; }
+    </style>
